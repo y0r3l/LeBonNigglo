@@ -1,0 +1,13 @@
+version: '2'
+services:
+  php:
+    restart: always
+    image: myphp
+    ports:
+    - "8080:80"
+    - "8081:443"
+    volumes:
+    - ./data/:/var/www/html
+    container_name: apache
+    network_mode: "bridge"
+
